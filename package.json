@@ -1,0 +1,24 @@
+{
+  "name": "wisestamp_nightwatch_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor-gudimov/wisestamp_nightwatch_framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igor-gudimov/wisestamp_nightwatch_framework/issues"
+  },
+  "homepage": "https://github.com/igor-gudimov/wisestamp_nightwatch_framework#readme",
+  "devDependencies": {
+    "chromedriver": "^109.0.0",
+    "nightwatch": "^2.6.10"
+  }
+}
