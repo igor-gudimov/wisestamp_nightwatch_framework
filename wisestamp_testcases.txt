@@ -1,0 +1,59 @@
+WiseStamp Apps Testsuit
+
+Test Case №1 - Add default Styled Signoff signature to the displayed letter
+Steps
+1. Go to site https://webapp.wisestamp.com/
+2. Click on Apps tab
+3. Click on Styled Signoff app buttom
+4. Check Styled Signoff app window is open
+5. Check that preview is displaying default signature
+6. Click Add button
+Expected Result - Check Signoff app window is closed and default signature was added to the displayed letter
+Actual Result - 
+Status -
+
+Test Case №2 - Add nondefault Styled Signoff signature
+Steps
+1. Go to site https://webapp.wisestamp.com/
+2. Click on Apps tab
+3. Click on Styled Signoff app buttom
+4. Check Styled Signoff app window is open
+5. Click Signature style button
+6. Choose "Best regards," for "Signoff" field
+7. Enter "Igor Gudimov" for "Sign as" field
+8. Choose "Yellowtail" for "Fond" field
+9. Turn "Animate" switch on
+10. Choose maximum "Size"
+11. Choose "Alignment" on the right
+12. Check that preview is displaying chosen signature
+13. Click Add button
+Expected Result - Check Signoff app window is closed and chosen signature was added to the displayed letter
+Actual Result - 
+Status -
+
+Test Case №3 - Add new YouTube video with default settings to the displayed letter
+Steps
+1. Go to site https://webapp.wisestamp.com/
+2. Click on Apps tab
+3. Click on Video app buttom
+4. Check Video app window is open and Add buttom is unclickable
+5. Enter any viable youtube link to "URL" field, example "https://www.youtube.com/watch?v=7xUTguLaaXI"
+6. Check that Add buttom is still unclickable
+7. Enter any text to "Title" field
+8. Check that Add buttom is clickable now
+9. Click Add button
+Expected Result - Check Video app window is closed and chosen video with default settings was added to the displayed letter
+Actual Result - 
+Status -
+
+Test Case №4 - Check that new YouTube video can't be added to the displayed letter without valid link
+Steps
+1. Go to site https://webapp.wisestamp.com/
+2. Click on Apps tab
+3. Click on Video app buttom
+4. Check Video app window is open and Add buttom is unclickable
+5. Enter any unviable youtube link to "URL" field, example "atch?v=7xUTguLaaXI" or "not_a_link"
+6. Enter any text to "Title" field
+Expected Result - Check that error message "" is displayed in preview and that Add buttom is still unclickable
+Actual Result - 
+Status -
