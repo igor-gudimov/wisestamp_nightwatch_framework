@@ -1,32 +1,28 @@
 describe('Apps', function() {
-    const data = require('../testData.js')
+    const data = require('../testData.js');
 
     it('Apps Test Case №3', function(browser) {
-      browser
-        .url(browser.launchUrl)
-        .setValue('input[id=details__name_input]', data.name)
-        .click('div[tab-name=ws-addons]')
-        .click('div[addon-id=youtube_status]')
-        
-        .waitForElementVisible('div[class=app__container] .app__title')
-        .assert.textContains('div[class=app__container] .app__title', data.videoPageTitle)
-        
-        .assert.not.enabled('.btn.btn__add > button')
-        .setValue('input[name=video_url]', data.videoURL)
-        
-        .assert.not.enabled('.btn.btn__add > button')
-        .setValue('input[name=user_title]', data.videoTitle)
-        .assert.enabled('.btn.btn__add > button')
-        
-        .waitForElementVisible('a[href="'+data.videoURL+'"]')
-        .assert.textContains('td[style="text-align:left"] > span', data.videoTitle)
-
-        .click('.btn.btn__add > button')
-
-        .waitForElementNotPresent('div[class=app__container] .app__title')
-        .waitForElementVisible('a[href="'+data.videoURL+'"]')
-        .assert.textContains('td[style="text-align:left"] > span', data.videoTitle)
-
-        .end();
+      const detailsSection = browser.page.detailsSection();
+      const editorMenuTab = browser.page.editorMenuTab();
+      const appsSection = browser.page.appsSection();
+      const videoAppWindow = browser.page.videoAppWindow();
+      const mainPreviewPanel = browser.page.mainPreviewPanel();
+      
+      browser.navigateTo(browser.launchUrl);
+      detailsSection.enterName(data.name);
+      editorMenuTab.clickAppsSectionButton();
+      appsSection.clickVideoAppButton();
+      videoAppWindow
+        .checkVideoWindowOpened(data.videoPageTitle)
+        .checkAddButtonUnclickable()
+        .enterVideoUrl(data.videoURL)
+        .checkAddButtonUnclickable()
+        .enterVideoTitle(data.videoTitle)
+        .checkAddButtonClickable()
+        .checkVideoPreviewIsUpdated(data.videoURL, data.videoTitle)
+        .clickAddButton()
+        .checkVideoWindowClose();
+      mainPreviewPanel.checkVideoPreviewIsUpdated(data.videoURL, data.videoTitle);
+      browser.end();
     });
   });

@@ -18,7 +18,7 @@ module.exports = {
   src_folders: ['./tests'],
 
   // See https://nightwatchjs.org/guide/concepts/page-object-model.html
-  page_objects_path: ['pages'],
+  page_objects_path: ['components'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-commands.html
   custom_commands_path: ['node_modules/nightwatch/examples/custom-commands/'],
