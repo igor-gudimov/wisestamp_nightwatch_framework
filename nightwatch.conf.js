@@ -66,7 +66,33 @@ module.exports = {
       }
     },
 
-    
+    chrome_headless: {
+      disable_error_log: false,
+      launch_url: 'https://webapp.wisestamp.com/',
+
+      screenshots: {
+        enabled: false,
+        path: 'screens',
+        on_failure: true
+      },
+
+      desiredCapabilities: {
+        browserName : 'chrome',
+        'goog:chromeOptions' : {
+          w3c: true,
+          args: [
+            '--start-maximized',
+            '--headless',
+            '--no-sandbox'
+          ]
+        }
+      },
+
+      webdriver: {
+        start_process: true,
+        server_path: ''
+      }
+    },
 
     firefox: {
       desiredCapabilities : {
