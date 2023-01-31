@@ -18,7 +18,7 @@ module.exports = {
   src_folders: ['./tests'],
 
   // See https://nightwatchjs.org/guide/concepts/page-object-model.html
-  page_objects_path: ['node_modules/nightwatch/examples/pages/'],
+  page_objects_path: ['pages'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-commands.html
   custom_commands_path: ['node_modules/nightwatch/examples/custom-commands/'],
@@ -42,7 +42,7 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'https://nightwatchjs.org',
+      launch_url: 'https://webapp.wisestamp.com/',
 
       screenshots: {
         enabled: false,

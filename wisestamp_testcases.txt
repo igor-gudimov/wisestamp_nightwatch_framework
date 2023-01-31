@@ -6,7 +6,7 @@ Steps
 2. Click on Apps tab
 3. Click on Styled Signoff app buttom
 4. Check Styled Signoff app window is open
-5. Check that preview is displaying default signature
+5. Check that preview is displaying default signature and Add button is clickable
 6. Click Add button
 Expected Result - Check Signoff app window is closed and default signature was added to the displayed letter
 Actual Result - 
