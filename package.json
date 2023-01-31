@@ -19,6 +19,7 @@
   "homepage": "https://github.com/igor-gudimov/wisestamp_nightwatch_framework#readme",
   "devDependencies": {
     "chromedriver": "^109.0.0",
-    "nightwatch": "^2.6.10"
+    "nightwatch": "^2.6.10",
+    "nightwatch-allure": "^1.2.0"
   }
 }
